@@ -1,8 +1,9 @@
 control.onEvent(EventBusSource.MICROBIT_ID_BUTTON_A, EventBusValue.MICROBIT_BUTTON_EVT_UP, function () {
+    radio.sendString("all")
     basic.showIcon(IconNames.Happy)
 })
 input.onButtonPressed(Button.A, function () {
-    radio.sendString("all")
+	
 })
 control.onEvent(EventBusSource.MICROBIT_ID_BUTTON_A, EventBusValue.MICROBIT_BUTTON_EVT_DOWN, function () {
     basic.showString("A")
